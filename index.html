@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sachin Kumar | VFX Compositing Lead</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Inter, sans-serif;
+  background:#000;
+  color:#fff;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero video{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0.35;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle, rgba(0,0,0,0.3), rgba(0,0,0,0.95));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:5vw;
+  letter-spacing:6px;
+  font-weight:600;
+}
+
+.hero p{
+  margin-top:10px;
+  opacity:0.7;
+  font-size:18px;
+}
+
+.btn{
+  margin-top:30px;
+  padding:12px 28px;
+  border:1px solid #fff;
+  color:#fff;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#fff;
+  color:#000;
+}
+
+/* SECTIONS */
+section{
+  padding:100px 10%;
+}
+
+h2{
+  font-size:28px;
+  margin-bottom:40px;
+  letter-spacing:2px;
+}
+
+/* PROJECTS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#111;
+  overflow:hidden;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.03);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card h3{
+  padding:15px;
+}
+
+/* ABOUT */
+.about{
+  max-width:800px;
+  margin:auto;
+  text-align:center;
+  opacity:0.8;
+  line-height:1.7;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+  opacity:0.8;
+  line-height:2;
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  border-top:1px solid #222;
+  opacity:0.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+
+<video autoplay muted loop>
+<source src="showreel.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+<h1>SACHIN KUMAR</h1>
+<p>VFX Compositing Lead</p>
+<a href="#projects" class="btn">VIEW WORK</a>
+</div>
+
+</div>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2>SELECTED WORK</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="project1.jpg">
+<h3>Film / Project 01</h3>
+</div>
+
+<div class="card">
+<img src="project2.jpg">
+<h3>Film / Project 02</h3>
+</div>
+
+<div class="card">
+<img src="project3.jpg">
+<h3>Film / Project 03</h3>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section>
+<h2>ABOUT</h2>
+<div class="about">
+I am a VFX Compositing professional specializing in feature films and high-end visual effects.
+I focus on creating seamless, cinematic shots that support storytelling and realism.
+</div>
+</section>
+
+<!-- CONTACT -->
+<section>
+<h2>CONTACT</h2>
+<div class="contact">
+Email: yourname@email.com <br>
+IMDb: https://www.imdb.com (Sachin Kumar Chauhan) <br>
+LinkedIn: your profile link
+</div>
+</section>
+
+<footer>
+© 2026 Sachin Kumar
+</footer>
+
+</body>
+</html>
