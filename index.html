@@ -1,245 +1,700 @@
-<!doctype html>
-<html lang="en-US">
+<!DOCTYPE html>
+
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Portfolio | Showreel & Credits</title>
-    <meta name="description" content="Actor Portfolio - Showreel, IMDb Credits, and Production Gallery">
+<meta charset="UTF-8">
 
-    <!-- Fonts from your reference style -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Source+Code+Pro:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        /* Modern Minimalist Portfolio Styling */
-        :root {
-            --bg-color: #0b0b0b;
-            --text-color: #e0e0e0;
-            --accent-color: #ffffff;
-            --secondary-text: #888888;
-        }
+<title>Sachin Kumar | VFX Compositing LEAD/SUP</title>
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Source Code Pro', monospace;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
 
-        header {
-            padding: 40px 6%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #1a1a1a;
-        }
 
-        .logo {
-            font-family: 'Abel', sans-serif;
-            font-size: 1.8rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            font-weight: 400;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-        nav a {
-            color: var(--secondary-text);
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        nav a:hover, nav a.active {
-            color: var(--accent-color);
-        }
 
-        main {
-            flex: 1;
-            padding: 60px 6%;
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 90%;
-        }
 
-        /* Video Showcase Section */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            background: #111;
-            border: 1px solid #222;
-            margin-bottom: 50px;
-        }
+<style>
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+*{
 
-        /* Portfolio Info / Bio Split */
-        .profile-summary {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 60px;
-        }
+    margin:0;
 
-        @media (max-width: 768px) {
-            .profile-summary {
-                grid-template-columns: 1fr;
-            }
-        }
+    padding:0;
 
-        .bio h1 {
-            font-family: 'Abel', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 400;
-            margin-top: 0;
-            letter-spacing: 1px;
-            color: var(--accent-color);
-        }
+    box-sizing:border-box;
 
-        .bio p {
-            line-height: 1.7;
-            color: #b5b5b5;
-        }
+}
 
-        /* Action Buttons */
-        .cta-buttons {
-            margin-top: 30px;
-        }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border: 1px solid var(--accent-color);
-            color: var(--accent-color);
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
-            margin-right: 15px;
-            margin-bottom: 15px;
-        }
 
-        .btn:hover {
-            background-color: var(--accent-color);
-            color: var(--bg-color);
-        }
+html{
 
-        /* Image Gallery Grid Placeholders */
-        .gallery-section h2 {
-            font-family: 'Abel', sans-serif;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            border-bottom: 1px solid #222;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
+    scroll-behavior:smooth;
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
+}
 
-        .img-placeholder {
-            background-color: #141414;
-            border: 1px dashed #333;
-            aspect-ratio: 3 / 2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #555;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: border-color 0.3s;
-        }
 
-        .img-placeholder:hover {
-            border-color: #666;
-        }
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.8rem;
-            color: var(--secondary-text);
-            border-top: 1px solid #1a1a1a;
-        }
-    </style>
+body{
+
+    font-family:Inter,sans-serif;
+
+    background:#0a0a0a;
+
+    color:#fff;
+
+    line-height:1.6;
+
+}
+
+
+
+/* Navigation */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    z-index:100;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+
+.nav-container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:20px 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+.logo{
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:30px;
+
+}
+
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+}
+
+
+
+/* Hero */
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.8)),
+
+    url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1800') center/cover;
+
+}
+
+
+
+.hero-content h1{
+
+    font-size:clamp(3rem,8vw,7rem);
+
+    letter-spacing:6px;
+
+}
+
+
+
+.hero-content p{
+
+    margin-top:15px;
+
+    color:#aaa;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.hero-btn{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:14px 30px;
+
+    border:1px solid white;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+
+.hero-btn:hover{
+
+    background:white;
+
+    color:black;
+
+}
+
+
+
+/* Sections */
+
+section{
+
+    padding:100px 8%;
+
+}
+
+
+
+.section-title{
+
+    margin-bottom:50px;
+
+    font-size:14px;
+
+    letter-spacing:4px;
+
+    color:#999;
+
+}
+
+
+
+/* Studios */
+
+.studios{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+
+.studio{
+
+    border:1px solid #222;
+
+    padding:40px;
+
+    text-align:center;
+
+    color:#666;
+
+}
+
+
+
+/* Projects */
+
+.projects{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+
+
+.project{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.project img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.4s;
+
+}
+
+
+
+.project:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+.project-info{
+
+    padding:15px 0;
+
+}
+
+
+
+/* About */
+
+.about{
+
+    max-width:900px;
+
+}
+
+
+
+.about p{
+
+    color:#bbb;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* Filmography */
+
+.filmography{
+
+    display:grid;
+
+    gap:15px;
+
+}
+
+
+
+.credit{
+
+    border-bottom:1px solid #222;
+
+    padding-bottom:15px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:#ccc;
+
+}
+
+
+
+/* Contact */
+
+.contact{
+
+    text-align:center;
+
+}
+
+
+
+.contact a{
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+
+
+footer{
+
+    border-top:1px solid #222;
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#666;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+
+nav ul{
+
+    display:none;
+
+}
+
+
+
+.studios{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+</style>
+
 </head>
+
+
 
 <body>
 
-    <header>
-        <div class="logo">Portfolio</div>
-        <nav>
-            <a href="#" class="active">Home</a>
-            <a href="https://vimeo.com/649521695" target="_blank">Vimeo</a>
-            <a href="https://www.imdb.com/name/nm9897518/" target="_blank">IMDb Profile</a>
-        </nav>
-    </header>
 
-    <main>
-        <!-- Embedded Vimeo Showreel -->
-        <div class="video-container">
-            <iframe src="https://player.vimeo.com/video/649521695?h=835749f7ec&color=ffffff&title=0&byline=0&portrait=0" 
-                    frameborder="0" 
-                    allow="autoplay; fullscreen; picture-in-picture" 
-                    allowfullscreen>
-            </iframe>
-        </div>
 
-        <!-- Bio and Main Links -->
-        <div class="profile-summary">
-            <div class="bio">
-                <h1>Showcase &amp; Credits</h1>
-                <p>Welcome to my professional creative hub. Below you will find quick access to my industry profiles, verified filmography details, and visual updates.</p>
-                
-                <div class="cta-buttons">
-                    <a href="https://www.imdb.com/name/nm9897518/" target="_blank" class="btn">View IMDb Page</a>
-                    <a href="https://vimeo.com/649521695" target="_blank" class="btn">Watch Showreel</a>
-                </div>
-            </div>
-            <div>
-                <!-- Right side can be used for mini stats, secondary text, or an image later -->
-                <div class="img-placeholder" style="aspect-ratio: 16/9; height: 100%;">
-                    Primary Featured Headshot Place
-                </div>
-            </div>
-        </div>
+<nav>
 
-        <!-- Headshots / Production Stills Sections -->
-        <div class="gallery-section">
-            <h2>Gallery Stills</h2>
-            <div class="grid-container">
-                <!-- Swap out the template divs below with <img src="your-image.jpg"> whenever you are ready -->
-                <div class="img-placeholder">Image Place 1 (3:2)</div>
-                <div class="img-placeholder">Image Place 2 (3:2)</div>
-                <div class="img-placeholder">Image Place 3 (3:2)</div>
-            </div>
-        </div>
-    </main>
+<div class="nav-container">
 
-    <footer>
-        <p>&copy; 2026 Portfolio. All Rights Reserved.</p>
-    </footer>
+<div class="logo">SACHIN KUMAR</div>
+
+
+
+<ul>
+
+<li><a href="#home">HOME</a></li>
+
+<li><a href="#showreel">REEL</a></li>
+
+<li><a href="#about">ABOUT</a></li>
+
+<li><a href="#work">PROJECTS</a></li>
+
+<li><a href="#filmography">FILMOGRAPHY</a></li>
+
+<li><a href="#contact">CONTACT</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>SACHIN KUMAR</h1>
+
+<p>VFX COMPOSITING LEAD</p>
+
+
+
+<a href="#work" class="hero-btn">
+
+VIEW WORK
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<div class="section-title">STUDIOS</div>
+
+
+
+<div class="studios">
+
+<div class="studio">STUDIO 01</div>
+
+<div class="studio">STUDIO 02</div>
+
+<div class="studio">STUDIO 03</div>
+
+<div class="studio">STUDIO 04</div>
+
+</div>
+
+</section>
+
+
+
+<section id="work">
+
+<div class="section-title">SELECTED WORK</div>
+
+
+
+<div class="projects">
+
+
+
+<div class="project">
+
+<img src="https://picsum.photos/500/700?1">
+
+<div class="project-info">
+
+<h3>PROJECT NAME</h3>
+
+<p>Feature Film</p>
+
+</div>
+
+</div>
+
+
+
+<div class="project">
+
+<img src="https://picsum.photos/500/700?2">
+
+<div class="project-info">
+
+<h3>PROJECT NAME</h3>
+
+<p>Streaming Series</p>
+
+</div>
+
+</div>
+
+
+
+<div class="project">
+
+<img src="https://picsum.photos/500/700?3">
+
+<div class="project-info">
+
+<h3>PROJECT NAME</h3>
+
+<p>Feature Film</p>
+
+</div>
+
+</div>
+
+
+
+<div class="project">
+
+<img src="https://picsum.photos/500/700?4">
+
+<div class="project-info">
+
+<h3>PROJECT NAME</h3>
+
+<p>Feature Film</p>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+<section id="about">
+
+<div class="section-title">ABOUT</div>
+
+
+
+<div class="about">
+
+<p>
+
+VFX Compositing Lead with experience delivering high-end visual effects
+
+for feature films and episodic content.
+
+</p>
+
+
+
+<p>
+
+Specializing in compositing, look development, integration,
+
+and shot finaling while collaborating closely with supervisors,
+
+artists and production teams.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<section id="filmography">
+
+<div class="section-title">FILMOGRAPHY</div>
+
+
+
+<div class="filmography">
+
+
+
+<div class="credit">
+
+<span>PROJECT NAME</span>
+
+<span>2025</span>
+
+</div>
+
+
+
+<div class="credit">
+
+<span>PROJECT NAME</span>
+
+<span>2024</span>
+
+</div>
+
+
+
+<div class="credit">
+
+<span>PROJECT NAME</span>
+
+<span>2023</span>
+
+</div>
+
+
+
+<div class="credit">
+
+<span>PROJECT NAME</span>
+
+<span>2022</span>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+<section id="contact">
+
+<div class="section-title">CONTACT</div>
+
+
+
+<div class="contact">
+
+<p>Email: your@email.com</p>
+
+<p>IMDb: Coming Soon</p>
+
+<p>LinkedIn: Coming Soon</p>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+© 2026 Sachin Kumar
+
+</footer>
+
+
 
 </body>
-</html>
+
+</html> 
+
