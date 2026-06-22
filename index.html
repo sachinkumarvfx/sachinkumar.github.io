@@ -3,347 +3,329 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sachin Kumar | VFX Compositing LEAD/SUP</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<title>Sachin Kumar | VFX Compositing Lead</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    :root { 
+        --accent: #fff; 
+        --secondary: #999; 
+        --bg: #0a0a0a; 
+    }
+    
+    * { 
+        margin: 0; 
+        padding: 0; 
+        box-sizing: border-box; 
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
 
-html{
-    scroll-behavior:smooth;
-}
+    body { 
+        font-family: 'Inter', sans-serif; 
+        background: var(--bg); 
+        color: var(--accent); 
+        line-height: 1.5; 
+    }
 
-body{
-    font-family:Inter,sans-serif;
-    background:#0a0a0a;
-    color:#fff;
-    line-height:1.6;
-}
+    /* Navigation */
+    nav { 
+        position: fixed; 
+        top: 0; 
+        width: 100%; 
+        padding: 30px 5%; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        z-index: 100; 
+        background: rgba(10, 10, 10, 0.8);
+        backdrop-filter: blur(10px); 
+    }
+    
+    .logo { 
+        font-size: 12px; 
+        letter-spacing: 4px; 
+        font-weight: 500; 
+        text-transform: uppercase;
+    }
+    
+    nav ul { 
+        display: flex; 
+        list-style: none; 
+        gap: 40px; 
+    }
+    
+    nav a { 
+        color: var(--accent); 
+        text-decoration: none; 
+        font-size: 11px; 
+        letter-spacing: 2px; 
+        opacity: 0.7; 
+        transition: 0.3s; 
+    }
+    
+    nav a:hover { 
+        opacity: 1; 
+    }
 
-/* Navigation */
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:100;
-    background:rgba(0,0,0,.75);
-    backdrop-filter:blur(10px);
-}
+    /* Layout */
+    section { 
+        padding: 120px 5%; 
+        max-width: 1100px; 
+        margin: auto; 
+    }
+    
+    .section-title { 
+        font-size: 11px; 
+        letter-spacing: 6px; 
+        color: var(--secondary); 
+        margin-bottom: 60px; 
+        text-transform: uppercase; 
+    }
 
-.nav-container{
-    max-width:1400px;
-    margin:auto;
-    padding:20px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+    /* Hero */
+    .hero { 
+        height: 80vh; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+    }
+    
+    .hero h1 { 
+        font-size: clamp(3rem, 10vw, 6rem); 
+        letter-spacing: -2px; 
+        line-height: 1; 
+    }
+    
+    .hero p { 
+        font-size: 1.2rem; 
+        color: var(--secondary); 
+        margin-top: 20px; 
+        letter-spacing: 1px; 
+    }
 
-.logo{
-    font-size:14px;
-    letter-spacing:3px;
-    font-weight:600;
-}
+    /* Showreel */
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+        background: #111; 
+    }
 
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:30px;
-}
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    font-size:14px;
-}
+    /* Projects Grid */
+    .projects { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+        gap: 40px; 
+    }
+    
+    .project-card { 
+        cursor: pointer; 
+    }
+    
+    .project-card img { 
+        width: 100%; 
+        aspect-ratio: 16/9; 
+        object-fit: cover; 
+        filter: grayscale(0.2); 
+        transition: 0.5s; 
+    }
+    
+    .project-card:hover img { 
+        filter: grayscale(0); 
+    }
+    
+    .project-info { 
+        padding-top: 20px; 
+    }
+    
+    .project-info h3 { 
+        font-size: 16px; 
+        font-weight: 400; 
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .project-info p { 
+        font-size: 13px; 
+        color: var(--secondary); 
+        margin-top: 5px; 
+    }
 
-/* Hero */
-.hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-    background:
-    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.8)),
-    url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1800') center/cover;
-}
+    /* Filmography */
+    .filmography { 
+        display: flex; 
+        flex-direction: column; 
+    }
+    
+    .credit { 
+        display: flex; 
+        justify-content: space-between; 
+        padding: 20px 0; 
+        border-bottom: 1px solid #1a1a1a; 
+        font-size: 14px; 
+        letter-spacing: 1px;
+    }
+    
+    .credit span:last-child { 
+        color: var(--secondary); 
+    }
 
-.hero-content h1{
-    font-size:clamp(3rem,8vw,7rem);
-    letter-spacing:6px;
-}
+    /* About & Contact */
+    .about p {
+        max-width: 600px; 
+        font-size: 1.1rem; 
+        color: #ccc;
+        margin-bottom: 20px;
+    }
 
-.hero-content p{
-    margin-top:15px;
-    color:#aaa;
-    letter-spacing:2px;
-}
+    .contact-links a {
+        display: block;
+        color: var(--accent);
+        text-decoration: none;
+        margin-bottom: 10px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        opacity: 0.8;
+        transition: 0.3s;
+    }
 
-.hero-btn{
-    display:inline-block;
-    margin-top:35px;
-    padding:14px 30px;
-    border:1px solid white;
-    color:white;
-    text-decoration:none;
-    transition:.3s;
-}
+    .contact-links a:hover {
+        opacity: 1;
+    }
 
-.hero-btn:hover{
-    background:white;
-    color:black;
-}
+    footer { 
+        padding: 80px 5% 40px; 
+        text-align: center; 
+        font-size: 11px; 
+        color: #444; 
+        letter-spacing: 2px;
+    }
 
-/* Sections */
-section{
-    padding:100px 8%;
-}
-
-.section-title{
-    margin-bottom:50px;
-    font-size:14px;
-    letter-spacing:4px;
-    color:#999;
-}
-
-/* Studios */
-.studios{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.studio{
-    border:1px solid #222;
-    padding:40px;
-    text-align:center;
-    color:#666;
-}
-
-/* Projects */
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.project{
-    position:relative;
-    overflow:hidden;
-}
-
-.project img{
-    width:100%;
-    display:block;
-    transition:.4s;
-}
-
-.project:hover img{
-    transform:scale(1.05);
-}
-
-.project-info{
-    padding:15px 0;
-}
-
-/* About */
-.about{
-    max-width:900px;
-}
-
-.about p{
-    color:#bbb;
-    margin-bottom:20px;
-}
-
-/* Filmography */
-.filmography{
-    display:grid;
-    gap:15px;
-}
-
-.credit{
-    border-bottom:1px solid #222;
-    padding-bottom:15px;
-    display:flex;
-    justify-content:space-between;
-    color:#ccc;
-}
-
-/* Contact */
-.contact{
-    text-align:center;
-}
-
-.contact a{
-    color:white;
-    text-decoration:none;
-}
-
-footer{
-    border-top:1px solid #222;
-    text-align:center;
-    padding:30px;
-    color:#666;
-}
-
-@media(max-width:768px){
-
-nav ul{
-    display:none;
-}
-
-.studios{
-    grid-template-columns:repeat(2,1fr);
-}
-}
+    /* Mobile Adjustments */
+    @media(max-width: 768px) {
+        nav {
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px 5%;
+        }
+        nav ul {
+            gap: 20px;
+        }
+        .projects {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
 </head>
-
 <body>
 
 <nav>
-<div class="nav-container">
-<div class="logo">SACHIN KUMAR</div>
-
-<ul>
-<li><a href="#home">HOME</a></li>
-<li><a href="#showreel">REEL</a></li>
-<li><a href="#about">ABOUT</a></li>
-<li><a href="#work">PROJECTS</a></li>
-<li><a href="#filmography">FILMOGRAPHY</a></li>
-<li><a href="#contact">CONTACT</a></li>
-</ul>
-</div>
+    <div class="logo">SACHIN KUMAR</div>
+    <ul>
+        <li><a href="#showreel">REEL</a></li>
+        <li><a href="#work">WORK</a></li>
+        <li><a href="#filmography">CREDITS</a></li>
+        <li><a href="#about">BIO</a></li>
+    </ul>
 </nav>
 
-<section class="hero">
-<div class="hero-content">
-<h1>SACHIN KUMAR</h1>
-<p>VFX COMPOSITING LEAD</p>
-
-<a href="#work" class="hero-btn">
-VIEW WORK
-</a>
-</div>
+<section id="home" class="hero">
+    <h1>SACHIN KUMAR</h1>
+    <p>VFX COMPOSITING LEAD / SUP</p>
 </section>
 
-<section>
-<div class="section-title">STUDIOS</div>
-
-<div class="studios">
-<div class="studio">STUDIO 01</div>
-<div class="studio">STUDIO 02</div>
-<div class="studio">STUDIO 03</div>
-<div class="studio">STUDIO 04</div>
-</div>
+<section id="showreel">
+    <div class="section-title">2026 SHOWREEL</div>
+    <div class="video-container">
+        <iframe src="https://player.vimeo.com/video/76979871?h=8272103f6e" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="VFX Showreel"></iframe>
+    </div>
 </section>
 
 <section id="work">
-<div class="section-title">SELECTED WORK</div>
+    <div class="section-title">FEATURED WORK</div>
+    <div class="projects">
+        
+        <div class="project-card">
+            <img src="https://picsum.photos/800/450?1" alt="Vigyan Anthem Visuals">
+            <div class="project-info">
+                <h3>Vigyan Anthem</h3>
+                <p>Science-Themed Music Project · 2026</p>
+            </div>
+        </div>
 
-<div class="projects">
+        <div class="project-card">
+            <img src="https://picsum.photos/800/450?2" alt="SK Devgeet Branding">
+            <div class="project-info">
+                <h3>SK Devgeet</h3>
+                <p>Devotional Visuals (Shiv Aradhana) · 2025</p>
+            </div>
+        </div>
 
-<div class="project">
-<img src="https://picsum.photos/500/700?1">
-<div class="project-info">
-<h3>PROJECT NAME</h3>
-<p>Feature Film</p>
-</div>
-</div>
+        <div class="project-card">
+            <img src="https://picsum.photos/800/450?3" alt="Sachin Geetkaar Channel Graphics">
+            <div class="project-info">
+                <h3>Sachin Geetkaar</h3>
+                <p>Channel Rebrand & Design · 2025</p>
+            </div>
+        </div>
 
-<div class="project">
-<img src="https://picsum.photos/500/700?2">
-<div class="project-info">
-<h3>PROJECT NAME</h3>
-<p>Streaming Series</p>
-</div>
-</div>
+        <div class="project-card">
+            <img src="https://picsum.photos/800/450?4" alt="Farmer With Indian Family Artwork">
+            <div class="project-info">
+                <h3>Farmer With Indian Family</h3>
+                <p>Digital Artwork & Storytelling · 2025</p>
+            </div>
+        </div>
 
-<div class="project">
-<img src="https://picsum.photos/500/700?3">
-<div class="project-info">
-<h3>PROJECT NAME</h3>
-<p>Feature Film</p>
-</div>
-</div>
-
-<div class="project">
-<img src="https://picsum.photos/500/700?4">
-<div class="project-info">
-<h3>PROJECT NAME</h3>
-<p>Feature Film</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<section id="about">
-<div class="section-title">ABOUT</div>
-
-<div class="about">
-<p>
-VFX Compositing Lead with experience delivering high-end visual effects
-for feature films and episodic content.
-</p>
-
-<p>
-Specializing in compositing, look development, integration,
-and shot finaling while collaborating closely with supervisors,
-artists and production teams.
-</p>
-</div>
+    </div>
 </section>
 
 <section id="filmography">
-<div class="section-title">FILMOGRAPHY</div>
-
-<div class="filmography">
-
-<div class="credit">
-<span>PROJECT NAME</span>
-<span>2025</span>
-</div>
-
-<div class="credit">
-<span>PROJECT NAME</span>
-<span>2024</span>
-</div>
-
-<div class="credit">
-<span>PROJECT NAME</span>
-<span>2023</span>
-</div>
-
-<div class="credit">
-<span>PROJECT NAME</span>
-<span>2022</span>
-</div>
-
-</div>
+    <div class="section-title">FILMOGRAPHY</div>
+    <div class="filmography">
+        <div class="credit"><span>Abb Kisko Kahon Apna Humdum (Song Visuals)</span><span>2026</span></div>
+        <div class="credit"><span>Main Yeh Sochkar Uske Dar Se Utha Tha</span><span>2025</span></div>
+        <div class="credit"><span>Ram Premdhun (SK Devgeet)</span><span>2025</span></div>
+    </div>
 </section>
 
-<section id="contact">
-<div class="section-title">CONTACT</div>
-
-<div class="contact">
-<p>Email: your@email.com</p>
-<p>IMDb: Coming Soon</p>
-<p>LinkedIn: Coming Soon</p>
-</div>
+<section id="about">
+    <div class="section-title">ABOUT ME</div>
+    <div class="about">
+        <p>
+            VFX Compositing Lead with experience delivering high-end visual effects
+            for feature films, episodic content, and digital media. 
+        </p>
+        <p>
+            Specializing in compositing, look development, integration,
+            and shot finaling while collaborating closely with supervisors,
+            artists and production teams.
+        </p>
+    </div>
+    
+    <div class="section-title" style="margin-top: 80px; margin-bottom: 30px;">CONTACT</div>
+    <div class="contact-links">
+        <a href="mailto:your@email.com">Email: your@email.com</a>
+        <a href="#">IMDb: Coming Soon</a>
+        <a href="#">LinkedIn: Coming Soon</a>
+    </div>
 </section>
 
 <footer>
-© 2026 Sachin Kumar
+    © 2026 SACHIN KUMAR
 </footer>
 
 </body>
